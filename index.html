@@ -167,26 +167,31 @@
   </div>
   <div class="container"> <!-- Contact Form -->
     <h1 class="text-center" id="contactTitle">Got a Question? Contact us!</h1>
-    <form class="row g-3 my-5" action="https://formsubmit.co/jacob@jpako.com" method="POST">
+    <form class="row g-3 my-5" action="https://formsubmit.co/3a19f8ec8e0b3b2a9bc4da8a33144fe1" method="POST">
+      <!-- Honeypot -->
+      <input type="text" name="_honey" style="display: none;">
+      <!-- Disable Captcha -->
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_name" value="https://jspako.github.io/FYProject/success.html">
       <div class="col-md-6">
         <label for="firstName" class="form-label">First Name*</label>
-        <input type="text" class="form-control" id="firstName" required>
+        <input type="text" class="form-control" name="Name" id="firstName" required>
       </div>
       <div class="col-md-6">
         <label for="surName" class="form-label">Surname*</label>
-        <input type="text" class="form-control" id="surName" required>
+        <input type="text" class="form-control" name="Surname" id="surName" required>
       </div>
       <div class="col-md-8">
         <label for="emailInfo" class="form-label">E-mail Address*</label>
-        <input type="email" class="form-control" id="emailInfo" required>
+        <input type="email" class="form-control" name="Email" id="emailInfo" required>
       </div>
       <div class="col-md-4">
         <label for="phoneInfo" class="form-label">Phone Number</label>
-        <input type="text" class="form-control" id="phoneInfo" placeholder="+44 7700 900670"> 
+        <input type="text" class="form-control" name="Phone" id="phoneInfo" placeholder="+44 7700 900670"> 
       </div>
       <div class="col-md-12">
         <label for="messageInfo" class="form-label">Your message to us!*</label>
-        <textarea class="form-control" id="messageInfo" rows="4" required></textarea>
+        <textarea class="form-control" id="messageInfo" name="Message" rows="4" required></textarea>
       </div>
       <div class="col-md-12">
         <p class=""><small>* Required field</small></p>
