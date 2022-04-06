@@ -1,0 +1,133 @@
+*{
+    scrollbar-width: thin;
+    
+}
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+/* Navbar Section */
+
+#navbarS{
+    background-color: rgb(184, 184, 184);
+    opacity: 0.88;
+    transition: all 0.1s ease-out;
+}
+#navbarS:hover{
+    opacity: 1;
+    transition: all 0.2s ease-in;
+}
+#navbarA{
+    font-family: "Raleway", sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    color: black;
+}
+#navbarTitle{
+    font-family: "Raleway", sans-serif;
+    color: black;
+}
+#navbarNav{
+    justify-content: end;
+}
+
+#logo{
+    animation-name: logo-animation; /*This name is used to create an animation*/
+    animation-duration: 3s; /*Animation run duration*/
+}
+
+#logo:hover{
+    transform: rotate(
+    360deg
+  ); /*360-degree rotation when hovering over the image*/
+  transition-duration: 1.5s;
+}
+
+@keyframes logo-animation {
+    0% {
+      left: 0px;
+    } /*start*/
+    50% {
+      left: 200px;
+      transform: rotate(360deg);
+    }
+    100% {
+      left: 0px;
+    } /*end*/
+  }
+
+/* About Foundation Year Section && About Manchester Section uses same css*/
+
+#headingTitle{
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+}
+
+#aboutContent{
+    background-color: #dfe6e9;
+    padding: 10px 0px;
+    border-radius: 15px;
+}
+
+#aboutTitle{
+    font-family: "Headland One", serif;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+#aboutText{
+    font-family: "Newsreader", serif;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+/* Top accommodation */
+
+#topDiv{
+    background-color: #dfe6e9;
+    margin-top: 8em;
+    margin-bottom: 6em;
+}
+
+.accommodation img{
+    transition: all 0.3s ease-in;
+    color: none;
+}
+
+.accommodation:hover img {
+    transform: scale(1.1);
+    transition: all 0.3s ease-out;
+    opacity: 0.7;
+    filter: brightness(0.5) saturate(0.5)
+  }
+
+.accommodation:hover div{
+    opacity: 1;
+}
+
+.description{
+    font-family: "Raleway", sans-serif;
+    font-size: 17px;
+    color: whitesmoke;
+    transform: translateY(-150%);
+    opacity: 0;
+    transition: all 0.3s ease-out;
+}
+.description h1{
+    font-weight: 600;
+    font-size: 30px;
+}
+
+/* Contact Form */
+
+#contactTitle{
+    font-family: "Raleway", sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 10%;
+  }
