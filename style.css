@@ -1,13 +1,26 @@
-*{
-    scrollbar-width: thin;
-    
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
-::-webkit-scrollbar {
-    width: 15px;
+
+html {
+  font-family: "Raleway", sans-serif;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
 }
 
 body{
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 /* Navbar Section */
@@ -27,9 +40,16 @@ body{
     font-size: 18px;
     color: black;
 }
+
+#navbarA:hover{
+  color: blue;
+}
+
+
 #navbarTitle{
     font-family: "Raleway", sans-serif;
     color: black;
+    font-weight: 700;
 }
 #navbarNav{
     justify-content: end;
@@ -60,43 +80,172 @@ body{
     } /*end*/
   }
 
+.navbar-toggler{
+  background-color: white;
+}
+
 /* About Foundation Year Section && About Manchester Section uses same css*/
 
-#headingTitle{
-    font-family: "Raleway", sans-serif;
-    font-weight: 600;
-    font-size: 40px;
+
+.about-outer-container{
+  max-width: 1600px;
+  width: 100%;
+  height: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 70px 30px;
 }
 
-#aboutContent{
-    background-color: #dfe6e9;
-    padding: 10px 0px;
-    border-radius: 15px;
+.title {
+  max-width: 1600px;
+  width: 100%;
+  max-height: 50px;
+  margin: 0 auto;
+  margin-top: 60px;
+  padding-left: 7%;
+  font-size: 40px;
+  font-weight: 950;
+  font-family: "Raleway", sans-serif;font-family: "Raleway", sans-serif;
+
 }
+
+.a-container {
+  max-width: 1100px;
+  width: 100%;
+  height: auto;
+  margin: 70px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  border-radius: 35px;
+  background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+  border: 1.5px #000000 dashed;
+  transform: scale(1);
+  transition-timing-function: linear;
+  transition-duration: 0.4s;
+}
+
+.a-container:hover {
+  transform: scale(1.1);
+  box-shadow: 5px 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+.a-image {
+  max-width: 400px;
+  width: 100%;
+  height: 350px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-right: 1.5px #000000 dashed;
+  border-top-left-radius: 35px;
+  border-bottom-left-radius: 35px;
+}
+
+.a1-img {
+  background-image: url(assets/about1.jpg);
+}
+
+.a2-img {
+  background-image: url(assets/about2.jpg);
+}
+
+.a-details {
+  max-width: 700px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 30px 10px;
+}
+
+.a-details p {
+  font-size: 18px;
+  font-weight: 600;
+  padding: 3px;
+}
+
+.book {
+  background-image: linear-gradient(
+    to right,
+    #1fa2ff 0%,
+    #12d8fa 51%,
+    #1fa2ff 100%
+  );
+}
+.book {
+  margin: 10px;
+  padding: 10px 35px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.book:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+
+
+
+/*0000000000000000000000000*/
 
 #aboutTitle{
     font-family: "Headland One", serif;
     font-weight: 600;
     font-size: 30px;
+    background-color: aquamarine;
 }
 
 #aboutText{
     font-family: "Newsreader", serif;
     font-weight: 600;
     font-size: 18px;
+    background-color: blue;
 }
 
 /* Top accommodation */
 
 #topDiv{
-    background-color: #dfe6e9;
-    margin-top: 8em;
-    margin-bottom: 6em;
+  background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+  margin-top: 8em;
+  margin-bottom: 6em;
+}
+
+.accomm-outer-container{
+  max-width: 1600px;
+  width: 100%;
+  height: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0px 15px;
 }
 
 .accommodation img{
     transition: all 0.3s ease-in;
     color: none;
+    transform: scale(1.0);
 }
 
 .accommodation:hover img {
@@ -117,10 +266,23 @@ body{
     transform: translateY(-150%);
     opacity: 0;
     transition: all 0.3s ease-out;
+    max-width: 260px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
 }
 .description h1{
     font-weight: 600;
     font-size: 30px;
+}
+
+.accommodation{
+  padding: 10px 10px;
+  max-width: 300px;
+  width: 100%;
 }
 
 /* Contact Form */
@@ -129,5 +291,169 @@ body{
     font-family: "Raleway", sans-serif;
     font-size: 40px;
     font-weight: 600;
-    margin-top: 10%;
   }
+
+.container form{
+  background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+  padding: 40px 20px 40px 20px;
+  border-radius: 35px;
+  border: 1.5px #000000 dashed;
+  max-width: 1100px;
+  width: 100%;
+}
+
+.container form:hover{
+  box-shadow: 5px 20px 30px rgba(0, 0, 0, 0.2);
+  transition-timing-function: linear;
+  transition-duration: 0.4s;
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.btn-outline-primary {
+  background-image: linear-gradient(
+    to right,
+    #1fa2ff 0%,
+    #12d8fa 51%,
+    #1fa2ff 100%
+  );
+}
+.btn-outline-primary {
+  padding: 10px 35px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.btn-outline-primary:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+
+.button-more{
+  max-width: 1600px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+}
+
+.button-more a{
+  max-width: 300px;
+  width: 100%;
+}
+
+
+footer {
+  background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+  background-color: rgba(0, 0, 0, 0.156);
+  max-width: 1600px;
+  width: 100%;
+  height: 60%;
+  margin: 0 auto;
+  padding: 50px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.links-footer{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: #000000;
+}
+
+#item{
+  color: #000000;
+}
+
+#item:hover{
+  color: blue;
+}
+
+
+
+/*********************************************  @media  *******************************************************/
+/*Apply this code only when the browser width is 700px and lees*/
+  @media (max-width: 700px) {
+    .ms-3{
+      font-size: 22px;
+    }
+
+    .navbar-nav li:hover{
+      background-color: white;
+    }
+    #contactTitle{
+      font-size: 35px;
+      font-weight: 600;
+    }
+  }
+
+/*Apply this code only when the browser width is 1270px and lees*/
+@media (max-width: 1270px) {
+  .title {
+    text-align: center;
+    text-decoration: underline solid;
+  }
+  #contactTitle{
+    text-decoration: underline solid;
+  }
+  .a-container:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 1200px) {
+
+  .a-container {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    margin: 70px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    background-color: #dfe6e9;
+  }
+
+  .a-image {
+    max-width: 700px;
+    width: 100%;
+    max-height: 550px;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-bottom: 1.5px #000000 dashed;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    border-bottom-left-radius: 0px;
+    border-right: 0px;
+  }
+}
+
+
